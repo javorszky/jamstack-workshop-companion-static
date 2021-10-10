@@ -3,8 +3,9 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from './Home';
 import Nav from "./Nav";
+
+import Home from './Pages/Home';
 import AboutGabor from "./Pages/AboutGabor";
 
 function App() {
