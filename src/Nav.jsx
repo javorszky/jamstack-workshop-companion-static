@@ -126,9 +126,100 @@ function Nav() {
                     </ul>
                 </li>
             </ul>
+            <p className="menu-label">Table joins</p>
+            <ul className="menu-list">
+                <li>
+                    <Link to="/joins">Overview</Link>
+                </li>
+                <li>
+                    <Link to="/joins/types">Join types</Link>
+                    <ul>
+                        <li>
+                            <Link to="/joins/types/inner">Inner</Link>
+                        </li>
+                        <li>
+                            <Link to="/joins/types/outer">Outer</Link>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <p className="menu-label">Indexes and constraints</p>
+            <ul className="menu-list">
+                <li>
+                    <Link to="/indexes">Overview</Link>
+                </li>
+                <li>
+                    <Link to="/indexes/indextypes">Index types</Link>
+                    <ul>
+                        <li>
+                            <Link to="/indexes/unique">Unique</Link>
+                        </li>
+                        <li>
+                            <Link to="/indexes/partial">Partial</Link>
+                        </li>
+                        <li>
+                            <Link to="/indexes/compound">Compound</Link>
+                        </li>
+                        <li>
+                            <Link to="/indexes/covering">Covering</Link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <Link to="/indexes/constrainttypes">Non index constraints</Link>
+                    <ul>
+                        <li>
+                            <Link to="/indexes/foreignkeyconstraint">Foreign key constraints</Link>
+                        </li>
+                        <li>
+                            <Link to="/indexes/column-constraints">Column constraints</Link>
+                        </li>
+                        <li>
+                            <Link to="/indexes/table-constraints">Table constraints</Link>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <p className="menu-label">Stored procedures and triggers</p>
+            <ul className="menu-list">
+                <li>
+                    <Link to="/storedprocedures">Overview</Link>
+                </li>
+                <li>
+                    <Link to="/storedprocedures/procedure">Stored procedure</Link>
+                </li>
+                <li>
+                    <Link to="/storedprocedures/trigger">Trigger</Link>
+                </li>
+                <li>
+                    <Link to="/storedprocedures/usecases">Use cases</Link>
+                </li>
+            </ul>
+            <p className="menu-label">Supabase API</p>
+            <ul className="menu-list">
+                <li>
+                    <Link to="/supabaseapi">Overview</Link>
+                </li>
+                <li>
+                    <Link to="/supabaseapi/auth">Auth</Link>
+                </li>
+                <li>
+                    <Link to="/supabaseapi/fetch">Fetch</Link>
+                </li>
+                <li>
+                    <Link to="/supabaseapi/insert-upsert">Insert / Upsert</Link>
+                </li>
+                <li>
+                    <Link to="/supabaseapi/delete">Delete</Link>
+                </li>
+                <li>
+                    <Link to="/supabaseapi/rpc">RPC - Remote procedure call</Link>
+                </li>
+            </ul>
         </>
     )
-
 }
 
 export default Nav;
