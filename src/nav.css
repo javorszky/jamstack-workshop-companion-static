@@ -1,11 +1,15 @@
 .menu-list li ul {
-    display:none;
+    display: none;
 }
 
-.menu-list li ul+a::after {
-    content: 'open me';
-}
-
-.menu-list li a.is-active+ul , a.is-open+ul {
+.menu-list li a.is-active+ul, a.is-open+ul {
     display: block;
+}
+
+.menu-list>li>a::after {
+    content: ' +';
+}
+
+.menu-list>li>a:only-child:after {
+    content: '';
 }
