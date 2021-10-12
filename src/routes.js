@@ -3,6 +3,7 @@ import AboutGabor from './Pages/AboutGabor'
 import AboutRelational from './Pages/AboutRelational'
 import NonRelational from './Pages/NonRelational'
 import InitialSetup from './Pages/InitialSetup'
+import NotFound from './NotFound'
 
 import BasicOverview from './Pages/basic/Overview'
 import FirstSteps from './Pages/basic/FirstSteps'
@@ -252,6 +253,10 @@ const routes = [
         path: '/',
         component: Home,
     },
+    {
+        path: '*',
+        component: NotFound
+    }
 ]
 
 export default routes
