@@ -7,6 +7,11 @@ import Nav from "./Nav";
 
 import Home from './Pages/Home';
 import AboutGabor from "./Pages/AboutGabor";
+import AboutRelational from './Pages/AboutRelational'
+import NonRelational from './Pages/NonRelational'
+import InitialSetup from './Pages/InitialSetup'
+
+import routes from './routes'
 
 function App() {
   return (
@@ -18,13 +23,17 @@ function App() {
             <Nav />
           </aside>
           <section aria-roledescription="main" className="column level-item container">
+
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/about-gabor">
-                <AboutGabor />
-              </Route>
+              {routes.map((route, i) => {
+                console.log(route.path, route.component, 'get yer route')
+                const shadowedRoute = route
+                return (
+                  <Route key={i} path={shadowedRoute.path} exact={true} render={(props) => {
+                    return (<route.component />)
+                  }} />
+                )
+              })}
             </Switch>
           </section>
         </div>

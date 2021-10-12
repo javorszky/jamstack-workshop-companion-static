@@ -104,7 +104,7 @@ function Nav() {
                             <Link to="/basic/insert/bulk-inserts">Bulk inserts</Link>
                         </li>
                         <li>
-                            <Link to="/basic/insert/seletc">Inserting from another table</Link>
+                            <Link to="/basic/insert/select">Inserting from another table</Link>
                         </li>
                     </ul>
                 </li>
