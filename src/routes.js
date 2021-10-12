@@ -1,7 +1,6 @@
 import Home from './Pages/Home'
 import AboutGabor from './Pages/AboutGabor'
 import AboutRelational from './Pages/AboutRelational'
-import NonRelational from './Pages/NonRelational'
 import InitialSetup from './Pages/InitialSetup'
 import NotFound from './NotFound'
 
@@ -63,10 +62,6 @@ const routes = [
     {
         path: '/about-relational-databases',
         component: AboutRelational,
-    },
-    {
-        path: '/about-non-relational-databases',
-        component: NonRelational,
     },
     {
         path: '/initial-setup',

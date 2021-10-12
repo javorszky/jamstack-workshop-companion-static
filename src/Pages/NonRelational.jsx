@@ -1,5 +1,8 @@
 export default function AboutNonRelational() {
     return (
-        <h1 className="title">About NonRelational</h1>
+        <>
+            <h2 className="subtitle">Nonrelational databases</h2>
+
+        </>
     )
 }

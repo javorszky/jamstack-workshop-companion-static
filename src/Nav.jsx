@@ -49,9 +49,6 @@ function Nav() {
                     <Link to="/about-relational-databases">About Relational Databases</Link>
                 </li>
                 <li>
-                    <Link to="/about-non-relational-databases">Non-relational databases</Link>
-                </li>
-                <li>
                     <Link to="/initial-setup">Initial setup</Link>
                 </li>
             </ul>
