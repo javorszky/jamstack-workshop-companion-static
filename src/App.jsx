@@ -38,6 +38,15 @@ function App() {
           </section>
         </div>
       </section>
+      <footer className="footer mt-6 ">
+        <section className="container">
+          <div className="content columns has-text-centered">
+            <p className="column is-four-fifths is-offset-one-fifth">
+              <strong>Jamstack Conference - Practical introduction to relational databases companion site</strong> by <a href="https://javorszky.co.uk">Gabor Javorszky</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+          </div>
+        </section>
+      </footer>
     </>
   )
 }
