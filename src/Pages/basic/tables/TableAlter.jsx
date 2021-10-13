@@ -34,7 +34,7 @@ export default function TablesAlter() {
                 <p>If however you asked your neighbour "Hey, can you get me the turkey carving knife from <i>my</i> kitchen?" and gave them your keys, they would return with precisely what you wanted.</p>
             </Message>
             <p>Runing the above query in the query window in supabase should yield a new "Success. No rows returned." message.</p>
-            <Message type="is-info" header="Gotcha!">
+            <Message type="is-warning" header="Gotcha!">
                 <p>Heads up, supabase will run ALL queries currently present in the query window. If you still have the create product table query there, it will try to run that, as well as the alter table query, which will possibly fail because you already have a table with that name.</p>
                 <p>It is best to either open a new query window, or delete the contents of the existing one, or comment out the contents of the existing one.</p>
                 <p>In SQL, lines that start with a double dash, like this: <code>-- select ...</code>, are comments, and will be ignored.</p>

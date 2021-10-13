@@ -19,12 +19,12 @@ export default function TablesDrop() {
             <pre><code>{dropTableQuery}</code></pre>
             <p>With colour coding, here's what that looks like:</p>
             <img src={dropTableIllustration} alt="the query drop table products colour coded. Drop is 'do what', table is 'with what', and products is the name of the table" />
-            <Message type="is-warning" header="Dropping a table WILL delete all the data in it">
+            <Message type="is-danger" header="Dropping a table WILL delete all the data in it">
                 <p>Dropping a table is considered a destructive action. There's no way to undo it, unless you have backups in place. Because of that the permissions on the users we connect to databases to might be restrictive, and they might not even allow you to drop a table.</p>
                 <p>Make sure you have sufficient and recent enough backups in case you realise immediately after dropping a table that you've dropped the wrong one.</p>
             </Message>
 
-            <Message type="is-info" header="Dropping tables and foreign key constraints">
+            <Message type="is-warning" header="Dropping tables and foreign key constraints">
                 <p>You might not be allowed to drop a table if there are foreign key constraints set up on it. We'll learn about them a bit later, but generally one of two things can happen with dropping a table and foreign keys:</p>
                 <ol>
                     <li>You can't drop a table because other tables depend on it</li>
