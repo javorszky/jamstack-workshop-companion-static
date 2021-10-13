@@ -5,7 +5,6 @@ import InitialSetup from './Pages/InitialSetup'
 import NotFound from './NotFound'
 
 import BasicOverview from './Pages/basic/Overview'
-import FirstSteps from './Pages/basic/FirstSteps'
 import TableOperations from './Pages/basic/tables/Overview'
 
 import CreateTable from './Pages/basic/tables/TableCreate'
@@ -71,10 +70,6 @@ const routes = [
     {
         path: '/basic',
         component: BasicOverview
-    },
-    {
-        path: '/basic/first',
-        component: FirstSteps
     },
     {
         path: '/basic/tables',

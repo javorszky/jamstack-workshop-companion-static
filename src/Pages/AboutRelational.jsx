@@ -1,3 +1,5 @@
+import Message from './../components/Message'
+
 export default function AboutRelational() {
     return (
         <>
@@ -10,7 +12,9 @@ export default function AboutRelational() {
             <p>The idea of a relational database is that you store data in different tables which you can link together to grab related data.</p>
             <p>Contrast this with databases where the logic of storing data is not fragmented into tables; there's no concept of data being related.</p>
             <p>Examples of non-relational databases include Redis, a key-value store, Mongo, a NoSQL document store, and ElasticSearch, a full text search engine with an API.</p>
-            <p className="learn-more">Here's <a href="https://www.ibm.com/cloud/learn/relational-databases">IBM's page on what a relational database is</a></p>
+            <Message type='is-link' header='IBM on Relational databases'>
+                <p className="learn-more">Here's <a href="https://www.ibm.com/cloud/learn/relational-databases">IBM's page on what a relational database is</a></p>
+            </Message>
             <p>For most purposes when someone needs a database, a relational database is going to be a good way to start if they don't know any other requirements that they have besides "I have data, need to store it someplace." This makes learning about them a particularly useful skill.</p>
             <h3>Vocabulary and examples</h3>
             <p>Let's suppose we have a list of users in a table where we store a unique id, their email address, the name they gave us, and the hash of their password.</p>

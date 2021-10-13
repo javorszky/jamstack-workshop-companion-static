@@ -4,16 +4,15 @@ export default function InitialSetup() {
             <h2 className="subtitle">Initial setup / workshop goals</h2>
             <p>The repository you all have cloned already is a pseudo ecommerce store. It helps visualize some of the concepts about databases, so you'll not only learn how to do different things, but also how they're useful in a practical way.</p>
 
-            <p>Essentially it's an idea of a business to business ecommerce store:
-                <ul>
-                    <li>there are products</li>
-                    <li>addresses for shipping and billing that belong to the users</li>
-                    <li>cart</li>
-                    <li>orders (if there's time)</li>
-                    <li>fake payments against orders (if there's time)</li>
+            <p>Essentially it's an idea of a business to business ecommerce store:</p>
+            <ul>
+                <li>there are products</li>
+                <li>addresses for shipping and billing that belong to the users</li>
+                <li>cart</li>
+                <li>orders (if there's time)</li>
+                <li>fake payments against orders (if there's time)</li>
 
-                </ul>
-            </p>
+            </ul>
 
             <p>These will help us think about how they relate to each other, what data we should be storing about them, what data we need to store about them to enable relations, how to grab connected data out from the database in one go, what are the considerations when we have a TON of data, and most importantly, how to do it anyways.</p>
 

@@ -58,9 +58,6 @@ function Nav() {
                     <Link to="/basic">Overview</Link>
                 </li>
                 <li>
-                    <Link to="/basic/first">First steps to enable everything else</Link>
-                </li>
-                <li>
                     <Link to="/basic/tables">Table operations</Link>
                     <ul>
                         <li>

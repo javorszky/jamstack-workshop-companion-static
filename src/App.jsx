@@ -27,10 +27,8 @@ function App() {
               <h1 className="title is-spaced">Practical introduction to relational databases</h1>
               <Switch>
                 {routes.map((route, i) => {
-                  console.log(route.path, route.component, 'get yer route')
-                  const shadowedRoute = route
                   return (
-                    <Route key={i} path={shadowedRoute.path} exact={true} render={(props) => {
+                    <Route key={i} path={route.path} exact={true} render={(props) => {
                       return (<route.component />)
                     }} />
                   )
