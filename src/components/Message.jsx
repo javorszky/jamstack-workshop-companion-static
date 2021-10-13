@@ -11,8 +11,6 @@ const Message = (props) => {
             messageType = props.type
     }
 
-    console.log(props.type, messageType)
-
     return (
         <article className={'message ' + messageType} >
             <div className="message-header">

@@ -34,6 +34,5 @@ export default function TablesDrop() {
             </Message>
             <p>Next up, let's learn <Link to="/basic/tables/alter">how to alter the structure of an existing table</Link>.</p>
         </>
-
     )
 }
