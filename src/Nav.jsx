@@ -212,6 +212,12 @@ function Nav() {
                     <Link to="/supabaseapi/rpc">RPC - Remote procedure call</Link>
                 </li>
             </ul>
+            <p className="menu-label">Addenda</p>
+            <ul className="menu-list">
+                <li>
+                    <Link to="/how-to-read-command-specifications">How to read documentation pages</Link>
+                </li>
+            </ul>
         </>
     )
 }

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Message from './../../../components/Message'
 import alterTableIllustration from '../../../assets/alter_table.jpg'
 
@@ -46,6 +48,7 @@ export default function TablesAlter() {
             <Message type="is-link" header="Alter table on postgres">
                 <p>The documentation on <code>alter table</code> for postgres can be found here: <a href="https://www.postgresql.org/docs/13/sql-altertable.html">https://www.postgresql.org/docs/13/sql-altertable.html</a>.</p>
             </Message>
+            <p>Next up, let's learn how to <Link to="/basic/tables/copy">copy a table structure</Link>.</p>
         </>
 
     )

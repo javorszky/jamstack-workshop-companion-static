@@ -53,6 +53,8 @@ import SupabaseInsert from './Pages/supabase/InsertUpsert'
 import SupabaseDelete from './Pages/supabase/Delete'
 import SupabaseRPC from './Pages/supabase/RPC'
 
+import HowToReadDocs from './Pages/HowToReadDocs'
+
 const routes = [
     {
         path: '/about-gabor',
@@ -238,6 +240,10 @@ const routes = [
     {
         path: '/supabaseapi/rpc',
         component: SupabaseRPC
+    },
+    {
+        path: '/how-to-read-command-specifications',
+        component: HowToReadDocs,
     },
     {
         path: '/',
