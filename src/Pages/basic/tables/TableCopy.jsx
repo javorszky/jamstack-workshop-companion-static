@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Message from '../../../components/Message'
 import createTableLikeIllustration from './../../../assets/create_table_like.jpg'
+import { synopsisShort } from '../../../snippets/tableSynopsis'
 
 export default function TablesCopy() {
     const tableCopyQuery = `create table if not exists public.products_2 (
@@ -13,17 +14,6 @@ export default function TablesCopy() {
     like public.products
 );`
 
-    const synopsis = `CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } | UNLOGGED ] TABLE [ IF NOT EXISTS ] table_name ( [
-{ column_name data_type [ COLLATE collation ] [ column_constraint [ ... ] ]
-    | table_constraint
-    | LIKE parent_table [ like_option ... ] }
-    [, ... ]
-] )
-[ INHERITS ( parent_table [, ... ] ) ]
-[ WITH ( storage_parameter [= value] [, ... ] ) | WITH OIDS | WITHOUT OIDS ]
-[ ON COMMIT { PRESERVE ROWS | DELETE ROWS | DROP } ]
-[ TABLESPACE tablespace ]
-...`
     return (
         <>
             <h2 className="subtitle">Copy a database table</h2>
@@ -47,13 +37,12 @@ export default function TablesCopy() {
 
             <Message type="is-link" header="Reading postgres documentation">
                 <p>By now you have probably seen a few postgres documentation pages and wondered how the heck are you supposed to make sense of the Synopsis that they have going on on those pages. The look like this:</p>
-                <pre><code>{synopsis}</code></pre>
+                <pre><code>{synopsisShort}</code></pre>
                 <p>I've put together an addendum page to try to clear up and demystify some of the symbols being used there through examples and colour coding.</p>
                 <p>Have a look at <Link to="/how-to-read-command-specifications">how to read documentation pages</Link>.</p>
             </Message>
 
             <p>We're now ready to <Link to="/basic/select">learn how to select/fetch information out from tables</Link>.</p>
         </>
-
     )
 }

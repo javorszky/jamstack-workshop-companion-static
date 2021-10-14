@@ -1,3 +1,221 @@
 body {
     background-color: #FFFDFE;
 }
+
+.red {
+    color: #e93323;
+}
+
+.red-mid {
+    color: #ba2619;
+}
+
+.red-dark {
+    color: #8b1a10;
+}
+
+.orange {
+    color: #f2ad3c;
+}
+
+.orange-mid {
+    color: #c28a2e;
+}
+
+.orange-dark {
+    color: #916820;
+}
+
+.lime {
+    color: #bcfc4f;
+}
+
+.lime-mid {
+    color: #97ca3d;
+}
+
+.lime-dark {
+    color: #71972c;
+}
+
+.green {
+    color: #74fb4c;
+}
+
+.green-mid {
+    color: #5cc83a;
+}
+
+.green-dark {
+    color: #439629;
+}
+
+.cyan {
+    color: #74fbb0;
+}
+
+.cyan-mid {
+    color: #5cc88d;
+}
+
+.cyan-dark {
+    color: #439669;
+}
+
+.paleblue {
+    color: #4ba7f8;
+}
+
+.paleblue-mid {
+    color: #3a85c6;
+}
+
+.paleblue-dark {
+    color: #2a6494;
+}
+
+.blue {
+    color: #0000f4;
+}
+
+.blue-mid {
+    color: #0000c3;
+}
+
+.blue-dark {
+    color: #000092;
+}
+
+.purple {
+    color: #9b1ef5;
+}
+
+.purple-mid {
+    color: #7c16c4;
+}
+
+.purple-dark {
+    color: #5c0e93;
+}
+
+.magenta {
+    color: #ff32bb;
+}
+
+.magenta-mid {
+    color: #ba2684;
+}
+
+.magenta-dark {
+    color: #8b1a63;
+}
+
+/* backgrounds */
+
+.bg-red {
+    background-color: #e93323;
+}
+
+.bg-red-mid {
+    background-color: #ba2619;
+}
+
+.bg-red-dark {
+    background-color: #8b1a10;
+}
+
+.bg-orange {
+    background-color: #f2ad3c;
+}
+
+.bg-orange-mid {
+    background-color: #c28a2e;
+}
+
+.bg-orange-dark {
+    background-color: #916820;
+}
+
+.bg-lime {
+    background-color: #bcfc4f;
+}
+
+.bg-lime-mid {
+    background-color: #97ca3d;
+}
+
+.bg-lime-dark {
+    background-color: #71972c;
+}
+
+.bg-green {
+    background-color: #74fb4c;
+}
+
+.bg-green-mid {
+    background-color: #5cc83a;
+}
+
+.bg-green-dark {
+    background-color: #439629;
+}
+
+.bg-cyan {
+    background-color: #74fbb0;
+}
+
+.bg-cyan-mid {
+    background-color: #5cc88d;
+}
+
+.bg-cyan-dark {
+    background-color: #439669;
+}
+
+.bg-paleblue {
+    background-color: #4ba7f8;
+}
+
+.bg-paleblue-mid {
+    background-color: #3a85c6;
+}
+
+.bg-paleblue-dark {
+    background-color: #2a6494;
+}
+
+.bg-blue {
+    background-color: #0000f4;
+}
+
+.bg-blue-mid {
+    background-color: #0000c3;
+}
+
+.bg-blue-dark {
+    background-color: #000092;
+}
+
+.bg-purple {
+    background-color: #9b1ef5;
+}
+
+.bg-purple-mid {
+    background-color: #7c16c4;
+}
+
+.bg-purple-dark {
+    background-color: #5c0e93;
+}
+
+.bg-magenta {
+    background-color: #ff32bb;
+}
+
+.bg-magenta-mid {
+    background-color: #ba2684;
+}
+
+.bg-magenta-dark {
+    background-color: #8b1a63;
+}
