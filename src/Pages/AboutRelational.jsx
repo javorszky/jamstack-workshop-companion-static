@@ -22,7 +22,7 @@ export default function AboutRelational() {
             <p>We have another table where we store a list of orders by users. It would not make sense to have a separate table to store the orders for each user, so we store all of the orders, from all of the users in the same database. When we need to list the orders that a particular user has placed, we link the two tables together by the user's id (id column on the users table, and user_id column on the orders table), and pull out the records for the user from both tables.</p>
             <p>This linking, or relating, is where relational databases get their name, and it's what makes them super powerful.</p>
 
-            <img src={tableRelations} alt="illustration showing two tables with related data highlighted" className="mb-6" />
+            <img className="box my-6" src={tableRelations} alt="illustration showing two tables with related data highlighted" />
         </>
     )
 }

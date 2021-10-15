@@ -51,7 +51,7 @@ const HowToReadDocs = () => {
     | LIKE source_table [ `} <span className="bg-paleblue p-2">like_option</span> <span className="bg-orange p-2">...</span> {`] }
     [, ... ]
 ] )`}</code></pre>
-      <p>In the above, the <code>column_constraint</code> can be optionally repeated as many times as you need it to. Similarly <code>like_optiona</code> can be repeated. In these cases, they need to be separated by a space between them.</p>
+      <p>In the above, the <code>column_constraint</code> can be optionally repeated as many times as you need it to. Similarly <code>like_options</code> can be repeated. In these cases, they need to be separated by a space between them.</p>
       <p>For example the <code>column_constraint</code> would look like this:</p>
       <pre><code>{`CREATE TABLE example (
   `}id bigint <span className="bg-paleblue p-2">not null</span> <span className="bg-paleblue p-2">default 0</span>{`
@@ -66,7 +66,7 @@ const HowToReadDocs = () => {
 
    `}<span className="bg-lime p-2">[<span className="bg-orange p-2">, ...</span> ]</span>{`
 ] )`}</code></pre>
-      <p>In this case the entire region inside the curly braces can be repeated, however importantly they need to be separated by a comma. See the comma in front of the three dots? This is why a create table command looks like this:</p>
+      <p>In this case the entire region inside the curly braces can be repeated, however, importantly, they need to be separated by a comma. See the comma in front of the three dots? This is why a create table command looks like this:</p>
       <pre><code>{`CREATE TABLE products (import Message from '../components/Message';
 
     id UUID NOT NULL DEFAULT uuid_generate_v4()`}<span className="bg-paleblue p-2">,</span>{`
