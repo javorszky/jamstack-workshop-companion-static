@@ -1,5 +1,5 @@
 import Message from '../../../components/Message';
-
+import { Link } from 'react-router-dom';
 export default function FetchSome() {
     return (
         <>
@@ -37,6 +37,69 @@ export default function FetchSome() {
             <p>You can go ahead, open a new query window, paste that in there, and run it. You should get a lot of rows of information along with a LOT of columns. For our purposes we only care about the following columns</p>
 
             <img src="/select_columns_1.jpg" alt="" className="box my-6" />
+
+            <p>Let's suppose we only care about three columns: <b><i>C2</i></b>, <b><i>C3</i></b>, and <b><i>C4</i></b>. These ones:</p>
+
+            <img src="/select_columns_2.jpg" alt="" className="box my-6" />
+
+            <p>To achieve that we have to replace the <span className="bg-purple has-text-white p-2">*</span> with the column names we want: <span className="bg-paleblue p-2">C2</span>, <span className="bg-red p-2">C3</span>, and <span className="bg-lime p-2">C4</span>.</p>
+
+            <img src="/select_columns_3.jpg" alt="" className="box my-6" />
+
+            <p>That will result in a small dataset that is exactly what we want to see in this case:</p>
+
+            <img src="/select_columns_4.jpg" alt="" className="box-my-6" />
+
+            <p>To translate it back to list the tables from the <b><i>information_schema</i></b> view, we can use the following query, which you're welcome to run in your supabase instance:</p>
+
+            <pre><code>{`SELECT `}<span className="bg-paleblue p-2">table_schema</span>{`, `}<span className="bg-red p-2">table_name</span>{`, `} <span className="bg-lime p-2">table_type</span>{` FROM information_schema.tables WHERE table_schema='information_schema';`}</code></pre>
+            <p>That will give you every single table and view (see the <b><i>table_type</i></b> column) in the <i>information_schema</i> schema.</p>
+            <p>Because we're going to use this to figure out the table structure of the users table that supabase uses to keep track of, and figure out where it stores when you sign up, modify the query to be this:</p>
+
+            <pre><code>{`SELECT table_schema, table_name, table_type FROM information_schema.tables WHERE table_schema = 'auth';`}</code></pre>
+            <p>You should have a result set that looks something like this:</p>
+
+            <table className="table is-bordered is-striped is-hoverable">
+                <thead>
+                    <tr>
+                        <th>table_schema</th>
+                        <th>table_name</th>
+                        <th>table_type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>auth</td>
+                        <td>schema_migrations</td>
+                        <td>BASE_TABLE</td>
+                    </tr>
+                    <tr>
+                        <td>auth</td>
+                        <td>refresh_tokens</td>
+                        <td>BASE_TABLE</td>
+                    </tr>
+                    <tr>
+                        <td>auth</td>
+                        <td>audit_log_entries</td>
+                        <td>BASE_TABLE</td>
+                    </tr>
+                    <tr>
+                        <td>auth</td>
+                        <td>instances</td>
+                        <td>BASE_TABLE</td>
+                    </tr>
+                    <tr>
+                        <td>auth</td>
+                        <td>users</td>
+                        <td>BASE_TABLE</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Of these we're only going to work with the <i>users</i> table, but feel free to experiment figuring out what's in the others. As a hint, here's how to get the audit log entries:</p>
+
+            <pre><code>{`SELECT * FROM auth.audit_log_entries;`}</code></pre>
+
+            <p>When you're ready, let's move on to <Link to="/basic/select/renaming-columns">renaming columns in the results</Link>.</p>
         </>
     )
 }
