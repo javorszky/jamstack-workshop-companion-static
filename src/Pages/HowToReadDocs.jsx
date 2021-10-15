@@ -1,3 +1,4 @@
+import Message from '../components/Message'
 import { synopsis } from './../snippets/tableSynopsis'
 
 const HowToReadDocs = () => {
@@ -66,7 +67,8 @@ const HowToReadDocs = () => {
    `}<span className="bg-lime p-2">[<span className="bg-orange p-2">, ...</span> ]</span>{`
 ] )`}</code></pre>
       <p>In this case the entire region inside the curly braces can be repeated, however importantly they need to be separated by a comma. See the comma in front of the three dots? This is why a create table command looks like this:</p>
-      <pre><code>{`CREATE TABLE products (
+      <pre><code>{`CREATE TABLE products (import Message from '../components/Message';
+
     id UUID NOT NULL DEFAULT uuid_generate_v4()`}<span className="bg-paleblue p-2">,</span>{`
     name TEXT NOT NULL`}<span className="bg-paleblue p-2">,</span>{`
     price SMALLINT`}<span className="bg-paleblue p-2">,</span>{`
@@ -77,14 +79,55 @@ const HowToReadDocs = () => {
       <h4>6. There are substitutions with where clauses</h4>
       <p>If you look at the actual postgres documentation, their synopsis has some of the lowercase parts in bold and italics, like so:</p>
       <pre><code>{`CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } | UNLOGGED ] TABLE [ IF NOT EXISTS ] `}<b><i>table_name</i></b>{` ( [
-  { `}<b><i>column_name data_type</i></b>{` [ COLLATE `}<b><i>collation</i></b>{` ] [ `}<b><i>column_constraint</i></b>{` [ ... ] ]
+  { `}<b><i>column_name data_type</i></b>{` [ COLLATE `}<b><i>collation</i></b>{` ] [ `}<span className="bg-lime p-2"><b><i>column_constraint</i></b></span>{` [ ... ] ]
     | `}<b><i>table_constraint</i></b>{`
     | LIKE `}<b><i>source_table</i></b>{` [ `}<b><i>like_option</i></b>{` ... ] }
     [, ... ]
 ] )`}</code></pre>
 
+      <p>Those bold and italics can refer discrete things, or further definitions. For example <b><i>table_name</i></b>, and <b><i>data_type</i></b> are discrete things with explanations further down the documentation.</p>
 
-      <pre><code>CREATE [ [ GLOBAL | LOCAL ] &#123; TEMPORARY | TEMP &#125; | UNLOGGED ] TABLE [ IF NOT EXISTS ] table_name</code></pre>
+      <p>Something like <b><i>column_constraint</i></b> however is not in the documentation notes, instead you can find this later in the same synopsis:</p>
+      <pre><code>{`where `}<b><i>column_constraint</i></b>{` is:
+
+[ CONSTRAINT `}<b><i>constraint_name</i></b>{` ]
+{ NOT NULL |
+  NULL |
+  CHECK ( `}<b><i>expression</i></b>{` ) [ NO INHERIT ] |
+  DEFAULT `}<b><i>default_expr</i></b>{` |
+  GENERATED ALWAYS AS ( `}<b><i>generation_expr</i></b>{` ) STORED |
+  GENERATED { ALWAYS | BY DEFAULT } AS IDENTITY [ ( `}<b><i>sequence_options</i></b>{` ) ] |
+  UNIQUE `}<b><i>index_parameters</i></b>{` |
+  PRIMARY KEY `}<b><i>index_parameters</i></b>{` |
+  REFERENCES `}<b><i>reftable</i></b>{` [ ( `}<b><i>refcolumn</i></b>{` ) ] [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ]
+    [ ON DELETE `}<b><i>referential_action</i></b>{` ] [ ON UPDATE `}<b><i>referential_action</i></b>{` ] }
+[ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]`}</code></pre>
+
+      <p>It's a fragment with rules on its own. You could technically substitue this entire codebase to where <b><i>column_constraint</i></b> is, but this is what it would look like:</p>
+
+      <pre><code>{`CREATE [ [ GLOBAL | LOCAL ] { TEMPORARY | TEMP } | UNLOGGED ] TABLE [ IF NOT EXISTS ] `}<b><i>table_name</i></b>{` ( [
+  { `}<b><i>column_name data_type</i></b>{` [ COLLATE `}<b><i>collation</i></b>{` ] [ `}<span className="bg-lime p-2">{`[ CONSTRAINT `}<b><i>constraint_name</i></b>{` ]
+    { NOT NULL |
+      NULL |
+      CHECK ( `}<b><i>expression</i></b>{` ) [ NO INHERIT ] |
+      DEFAULT `}<b><i>default_expr</i></b>{` |
+      GENERATED ALWAYS AS ( `}<b><i>generation_expr</i></b>{` ) STORED |
+      GENERATED { ALWAYS | BY DEFAULT } AS IDENTITY [ ( `}<b><i>sequence_options</i></b>{` ) ] |
+      UNIQUE `}<b><i>index_parameters</i></b>{` |
+      PRIMARY KEY `}<b><i>index_parameters</i></b>{` |
+      REFERENCES `}<b><i>reftable</i></b>{` [ ( `}<b><i>refcolumn</i></b>{` ) ] [ MATCH FULL | MATCH PARTIAL | MATCH SIMPLE ]
+        [ ON DELETE `}<b><i>referential_action</i></b>{` ] [ ON UPDATE `}<b><i>referential_action</i></b>{` ] }
+    [ DEFERRABLE | NOT DEFERRABLE ] [ INITIALLY DEFERRED | INITIALLY IMMEDIATE ]`}</span>{` [ ... ] ]
+    | `}<b><i>table_constraint</i></b>{`
+    | LIKE `}<b><i>source_table</i></b>{` [ `}<b><i>like_option</i></b>{` ... ] }
+    [, ... ]
+] )`}</code></pre>
+
+      <p>I hope you agree that this would very quickly get out of hand. The same rules about parens, optional parts, exclusive choices and required exclusive choices, repetitions, and substitutions still apply in any part of the substitution definitions.</p>
+
+      <Message type="is-link" header="Postgres's doc page on this">
+        <p>There is a documentation page at Postgres for this, but it's maybe 5 lines, and they don't go into details as much and there are no examples of this. If you'd still like to see, here's the <a href="https://www.postgresql.org/docs/13/notation.html">page on conventions used in the docs</a>.</p>
+      </Message>
     </>
   )
 }
