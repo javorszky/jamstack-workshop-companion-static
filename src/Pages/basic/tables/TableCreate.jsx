@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom'
 
 import Message from './../../../components/Message'
-import createTableImage from '../../../assets/Create_table_optimized.jpg'
-import queryWindowPointer from '../../../assets/query_window_pointer.jpg'
-import pastedQuery from '../../../assets/pasted_query.jpg'
 
 export default function TablesCreate() {
     const productJson = `{
@@ -69,7 +66,7 @@ export default function TablesCreate() {
 
             <pre><code>{createProductTable}</code></pre>
             <p>To colour code what part does what, here's an image:</p>
-            <img className="box mb-6" src={createTableImage} />
+            <img className="box mb-6" src="/Create_table_optimized.jpg" />
 
             <Message type="is-info" header="Does it matter if the SQL is not capitalized?">
                 <p>In short, no. As a convention it can make life easier to visually distinguish which parts are SQL grammar (ie modifier words, etc), and which parts are given names that we provided the database with, but the part of the database that takes our query and makes sense of it will not care if the control parts are in all caps, or not.</p>
@@ -78,9 +75,9 @@ export default function TablesCreate() {
             </Message>
             <p>With that, we're now ready to run this query.</p>
             <p>In supabase, go to the SQL window. It has an icon of a >_ with a border around it. See the image to help you.</p>
-            <img className="box mb-6" src={queryWindowPointer} alt="screenshot of supabase interface of an arrow pointing at the SQL menu item" />
+            <img className="box mb-6" src="/query_window_pointer.jpg" alt="screenshot of supabase interface of an arrow pointing at the SQL menu item" />
             <p>In that page, click on the + New query link at the top of the new sidebar, and copy paste the create table command into the query window on the right. It should look like this:</p>
-            <img className="box mb-6" src={pastedQuery} alt="screenshot of supabase interface of the query window with the create table query pasted into it" />
+            <img className="box mb-6" src="/pasted_query.jpg" alt="screenshot of supabase interface of the query window with the create table query pasted into it" />
             <p>Once that's there, hit cmd+enter / ctrl+enter (I don't actually know the keyboard shortcut on Windows), or click the Run button in the bottom right corner of the query window. You should see the following in the result window, below the query window:</p>
             <pre><code>Success. No rows returned</code></pre>
             <p>With that, you're ready to move on to the next page, <Link to="/basic/tables/drop">dropping tables</Link>!</p>

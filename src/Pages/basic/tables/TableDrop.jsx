@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-
-import dropTableIllustration from '../../../assets/Drop_Table_Optimized.jpg'
 import Message from '../../../components/Message'
 
 export default function TablesDrop() {
@@ -18,7 +16,7 @@ export default function TablesDrop() {
             <p>Whatever your reasons, the way to drop a table is fairly quick:</p>
             <pre><code>{dropTableQuery}</code></pre>
             <p>With colour coding, here's what that looks like:</p>
-            <img className="box my-6" src={dropTableIllustration} alt="the query drop table products colour coded. Drop is 'do what', table is 'with what', and products is the name of the table" />
+            <img className="box my-6" src="/Drop_Table_Optimized.jpg" alt="the query drop table products colour coded. Drop is 'do what', table is 'with what', and products is the name of the table" />
             <Message type="is-danger" header="Dropping a table WILL delete all the data in it">
                 <p>Dropping a table is considered a destructive action. There's no way to undo it, unless you have backups in place. Because of that the permissions on the users we connect to databases to might be restrictive, and they might not even allow you to drop a table.</p>
                 <p>Make sure you have sufficient and recent enough backups in case you realise immediately after dropping a table that you've dropped the wrong one.</p>

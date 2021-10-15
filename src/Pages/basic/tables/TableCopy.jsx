@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Message from '../../../components/Message'
-import createTableLikeIllustration from './../../../assets/create_table_like.jpg'
 import { synopsisShort } from '../../../snippets/tableSynopsis'
 
 export default function TablesCopy() {
@@ -23,7 +22,7 @@ export default function TablesCopy() {
             <p>In those cases we can use a <code>like</code> operator instead of manually specifying each individual columns.</p>
             <pre><code>{tableCopyQuery}</code></pre>
             <p>I've included some other parts in this query to illustrate additional options you can have here. I'm including the absolute minimal version of the above query later in the page.</p>
-            <img className="box my-6" src={createTableLikeIllustration} alt="colour coded query: create is do what, table is with what, if not exists if do what modifier, public is schema, products_2 is table name, like is table structure specifier, public is schema name, products is table name, and including all excluding comments are structure modifiers" />
+            <img className="box my-6" src="/create_table_like.jpg" alt="colour coded query: create is do what, table is with what, if not exists if do what modifier, public is schema, products_2 is table name, like is table structure specifier, public is schema name, products is table name, and including all excluding comments are structure modifiers" />
             <p>This essentially means "create a new table named products_2 that has a structure and all other parts to it as products, except for the column comments, if any. Ignore those."</p>
             <p>The absolute minimal version of the above is this:</p>
             <pre><code>{tableCopyQueryMinimal}</code></pre>

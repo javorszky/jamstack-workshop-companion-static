@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Message from '../../../components/Message';
-import basicSelectIllustration from '../../../assets/basic_select.jpg'
 
 export default function FetchOverview() {
     return (
@@ -12,7 +11,7 @@ export default function FetchOverview() {
             <pre><code>{`SELECT * FROM public.products;`}</code></pre>
             <p>Colour coded to break up the monotony of the page, and to give a reference:</p>
 
-            <img src={basicSelectIllustration} alt="colour coded. Select from is do what. Star is return what. public is schema name, and products is table name" className="box my-6" />
+            <img src="/basic_select.jpg" alt="colour coded. Select from is do what. Star is return what. public is schema name, and products is table name" className="box my-6" />
 
             <p>In the sub pages we'll go over some more advanced uses of the <code>select</code> query.</p>
             <p>First up is only fetching <Link to="/basic/select/fetching-only-some-columns">some columns</Link> from the available dataset.</p>

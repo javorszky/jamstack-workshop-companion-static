@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
 import Message from './../../../components/Message'
-import alterTableIllustration from '../../../assets/alter_table.jpg'
 
 export default function TablesAlter() {
     const alterTableQuery = `alter table public.products
@@ -27,7 +26,7 @@ export default function TablesAlter() {
             <p>So let's add a column here that will house a VAT rate. For this column the value is going to be a <code>numeric</code> type with both a precision and scale. The column is going to be nullable, because the law makes a difference between "exempt" and "0%". In this case a <code>null</code> value means there is no value specified, with the implication that it's going to be exempt. A value of "0.00" will mean there IS a rate for the product, but that rate just happens to be 0%. Here's the entire <code>alter table</code> command that will achieve what we need. Notice that I've included the schema name here too:</p>
             <pre><code>{alterTableQuery}</code></pre>
             <p>Here's the colour coded breakdown of what it does:</p>
-            <img className="box my-6" src={alterTableIllustration} alt="alter table query colour coded. 'alter' is do what, 'table' is what with, public is schema name, products is table name, 'add' is do what, 'column' is with what, vat_rates is new column name, numeric(5,2) is column type, and null is column constraint" />
+            <img className="box my-6" src="/alter_table.jpg" alt="alter table query colour coded. 'alter' is do what, 'table' is what with, public is schema name, products is table name, 'add' is do what, 'column' is with what, vat_rates is new column name, numeric(5,2) is column type, and null is column constraint" />
             <p>Specifying the schema is useful, but for our purposes not required. If it's not there, postgres will search through the schemas you have access to in a set order and applies the changes to the first table it finds in whichever schema.</p>
             <Message type="is-info" header="When schemas are required">
                 <p>If you have a table present in multiple schemas, which we will have shortly, specifying the schema along with the table name is super important to avoid nasty surprises. You don't want to accidentally drop the wrong <code>users</code> table just because you forgot to specify you want to drop the <code>testing.users</code> table, where <code>testing</code> is a new schema you created.</p>

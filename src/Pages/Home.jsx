@@ -7,6 +7,7 @@ export default function Home() {
             <p>If you'd like to view this site offline, it's at <a href="https://github.com/javorszky/jamstack-workshop-companion-static">https://github.com/javorszky/jamstack-workshop-companion-static</a> with instructions on how to get it running locally.</p>
             <p>With that, choose from the menu on the left to read about any of the topics in more details.</p>
             <p>Hope you find this useful.</p>
+            <p><b><i>Note that I'm actively adding content, if something is empty, I've not gotten there yet.</i></b></p>
         </>
     )
 }
