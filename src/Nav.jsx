@@ -78,10 +78,10 @@ function Nav() {
                     <Link to="/basic/select">Fetching data</Link>
                     <ul>
                         <li>
-                            <Link to="/basic/select/renaming-columns">Renaming columns in result</Link>
+                            <Link to="/basic/select/fetching-only-some-columns">Fetching only some of the columns</Link>
                         </li>
                         <li>
-                            <Link to="/basic/select/fetching-only-some-columns">Fetching only some of the columns</Link>
+                            <Link to="/basic/select/renaming-columns">Renaming columns in result</Link>
                         </li>
                         <li>
                             <Link to="/basic/select/where">Fetching some of the data with <code>WHERE</code></Link>
