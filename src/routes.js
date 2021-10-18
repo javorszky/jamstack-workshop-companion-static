@@ -16,6 +16,7 @@ import SelectOverview from './Pages/basic/select/Overview'
 import RenameColumns from './Pages/basic/select/FetchRename'
 import SomeColumns from './Pages/basic/select/FetchSome'
 import SelectWhere from './Pages/basic/select/FetchWhere'
+import SelectOrderBy from './Pages/basic/select/OrderByLimitOffsetHaving'
 
 import InsertOverview from './Pages/basic/insert/Overview'
 import InsertDefaults from './Pages/basic/insert/InsertDefaults'
@@ -110,6 +111,10 @@ const routes = [
     {
         path: '/basic/select/where',
         component: SelectWhere
+    },
+    {
+        path: '/basic/select/orderby-et-al',
+        component: SelectOrderBy
     },
     // Basic operations / insert
     {
