@@ -87,7 +87,7 @@ function Nav() {
                             <Link to="/basic/select/where">Fetching some of the data with <code>WHERE</code></Link>
                         </li>
                         <li>
-                            <Link to="/basic/select/orderby-et-al">Order By, Limit, Offset, Having, Group By</Link>
+                            <Link to="/basic/select/orderby-et-al">Order By, Limit, Offset</Link>
                         </li>
                     </ul>
                 </li>
