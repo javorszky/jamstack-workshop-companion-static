@@ -1,5 +1,7 @@
 export default function InsertDefaults() {
     return (
-        <h1 className="title">Insert Defaults</h1>
+        <>
+            <h2 className="subtitle">Default values and generated columns</h2>
+        </>
     )
 }
