@@ -12,7 +12,6 @@ const OrderBy = () => {
                 <p></p>
             </Message>
 
-
             <h3>Limit and offset</h3>
 
             <p>Limit and offset tells the database where to start returning the data from, and how much of it to return. This is useful if you want to have the last of something, or you're paginating results.</p>

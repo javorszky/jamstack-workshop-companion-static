@@ -163,6 +163,5 @@ export default function FetchRename() {
 
             <p>If you're okay with everything, let's more on to <Link to="/basic/select/where">restricting the result set with a <code>where</code> clause</Link>.</p>
         </>
-
     )
 }
