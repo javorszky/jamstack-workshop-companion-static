@@ -219,3 +219,7 @@ body {
 .bg-magenta-dark {
     background-color: #8b1a63;
 }
+
+pre code {
+    line-height: 1.8;
+}
