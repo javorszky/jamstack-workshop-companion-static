@@ -29,6 +29,8 @@ export default function InsertOverview() {
                 <p>The difference between them is that the SQL command (the first one) is going to be significantly faster, but the file you want to use needs to exist on the same machine the database is running on, as it does a local filesystem read.</p>
                 <p>The <code>\copy</code> meta command however can take a filepath that sites on your / the client computer, but the downside is that the data needs to pass through the network between the client and the server, which is orders of magnitude slower.</p>
             </Message>
+
+            <p>First up, let's deal with <Link to="/basic/insert/defaults">the defaults</Link>.</p>
         </>
 
     )
