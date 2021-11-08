@@ -22,6 +22,5 @@ VALUES (value_for_col1, value_for_col2);`}</code></pre>
 
             <p>This is important enoguh and common enough to get its own page. Once you're ready, move on to learning about <Link to="/basic/insert/select">inserting data from a different table</Link>.</p>
         </>
-
     )
 }
