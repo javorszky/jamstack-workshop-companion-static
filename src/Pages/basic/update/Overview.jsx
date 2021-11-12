@@ -14,7 +14,11 @@ export default function UpdateOverview() {
 
             <pre><code>UPDATE schema.table SET col1 = value1 WHERE col2 = value2;</code></pre>
 
-            <p>This concludes the four basic things you can do with data in the database. Let's move on to <Link to="/joins">learning about table joins!</Link></p>
+            <Message type="is-link" header="Postgres documentation for UPDATE">
+                <p>There are a few more ways to update rows in a table that I haven't touched on. You can have a read about them <a href="https://www.postgresql.org/docs/13/sql-update.html">on the UPDATE documentation page in the Postgres documentation</a>.</p>
+            </Message>
+
+            <p>That's pretty much it about updates. Let's move on to <Link to="/basic/delete">learning about deleting rows!</Link></p>
         </>
     )
 }
