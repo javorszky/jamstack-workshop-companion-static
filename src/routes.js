@@ -26,9 +26,6 @@ import InsertSelect from './Pages/basic/insert/InsertSelect'
 import UpdateOverview from './Pages/basic/update/Overview'
 
 import DeleteOverview from './Pages/basic/delete/Overview'
-import DeleteOne from './Pages/basic/delete/DeletingOne'
-import DeleteMany from './Pages/basic/delete/DeletingMany'
-import DeleteTruncate from './Pages/basic/delete/DeletingEverything'
 
 import JoinsOverview from './Pages/joins/Overview'
 import JoinTypes from './Pages/joins/JoinTypes'
@@ -144,18 +141,6 @@ const routes = [
     {
         path: '/basic/delete',
         component: DeleteOverview
-    },
-    {
-        path: '/basic/delete/delete-one',
-        component: DeleteOne
-    },
-    {
-        path: '/basic/delete/delete-many',
-        component: DeleteMany
-    },
-    {
-        path: '/basic/delete/truncate',
-        component: DeleteTruncate
     },
 
     // Table joins

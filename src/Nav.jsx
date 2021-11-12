@@ -110,17 +110,6 @@ function Nav() {
                 </li>
                 <li>
                     <Link to="/basic/delete">Deleting data</Link>
-                    <ul>
-                        <li>
-                            <Link to="/basic/delete/delete-one">Deleting one row</Link>
-                        </li>
-                        <li>
-                            <Link to="/basic/delete/delete-many">Delete many rows</Link>
-                        </li>
-                        <li>
-                            <Link to="/basic/delete/truncate">Delete everything / truncate</Link>
-                        </li>
-                    </ul>
                 </li>
             </ul>
             <p className="menu-label">Table joins</p>
